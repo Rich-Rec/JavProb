@@ -2,7 +2,10 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        final String romanNumber = "XVII";
+
+        int numberResult = fromRomanNumber(romanNumber);
+        System.out.println(numberResult);
     }
 
     static int fromRomanNumber(String input)
@@ -10,6 +13,13 @@ public class Main {
         int numberFromRomanInput = 0;
 
         ArrayList<Integer> arrayOfConvertedValues = new ArrayList<>();
+
+        for (int i = 0; i <input.length(); i++) {
+            if(input.charAt(i)== 'X')
+            {
+                numberFromRomanInput = 10;
+            }
+        }
 
         return numberFromRomanInput;
     }
